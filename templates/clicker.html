@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ clicks }} clicks</title>
+    <link rel="stylesheet" href="{{ static('clicker.css') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ static('image/cursor.png') }}" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.6">
+    <meta content="clicker" property="og:title" />
+    <meta content="{{ clicks }} clicks" property="og:description" />
+    <meta content="{{ static('image/cursor.png') }}" property="og:image" />
+    <meta content="." property="og:url" />
+    <script src="{{ static'clicker.js') }}"></script>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <h1 id="clicks">{{ clicks }}</h1>
+            <form method="post">
+                <button type="submit" onclick="increment();" title="Clicking this will update the number for everyone.">click!</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
